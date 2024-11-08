@@ -5,8 +5,12 @@ M.config = {
 	transparent = false,
 	glow = false,
 	show_end_of_buffer = true,
+	colors = {},
+}
 
-	colors = {
+if vim.o.background == 'dark' then
+	-- dark theme --
+	M.config.colors = {
 		fg = "#c0c0c0",
 		bg = "#1c1c1c",
 		cursor = "#bdfe58",
@@ -66,8 +70,71 @@ M.config = {
 		warning = "#d6efd8",
 		hint = "#bedc74",
 		info = "#7fa1c3",
-	},
-}
+	}
+else
+	-- light theme --
+	M.config.colors = {
+		fg = "#1c1c1c",
+		bg = "#f1f1f1",
+		cursor = "#4b8902",
+		line_nr = "#e0e0e0",
+		visual = "#c0c0c0",
+		comment = "#888888",
+		string = "#404040",
+		func = "#333333",
+		kw = "#000000",
+		identifier = "#444444",
+		type = "#555555",
+		type_builtin = "#c5c5c5",
+		search_highlight = "#17b88a",
+		operator = "#17b88a",
+		bracket = "#888888",
+		preprocessor = "#4b8902",
+		bool = "#006b6b",
+		constant = "#005757",
+		glow_color = "#17b88a",
+
+		-- enable or disable specific plugin highlights
+		plugins = {
+			gitsigns = true,
+			nvim_cmp = true,
+			treesitter = true,
+			nvimtree = true,
+			telescope = true,
+			lualine = true,
+			bufferline = true,
+			oil = true,
+			whichkey = true,
+			nvim_notify = true,
+		},
+
+		-- gitsigns colors
+		added = "#99d6a0",
+		changed = "#e6e59b",
+		removed = "#ff8f9e",
+
+		-- Pmenu colors
+		pmenu_bg = "#f1f1f1",
+		pmenu_sel_bg = "#17b88a",
+		pmenu_fg = "#1c1c1c",
+
+		-- EndOfBuffer color
+		eob = "#3c3c3c",
+
+		-- Telescope specific colors
+		border = "#585858",
+		title = "#9bce47",
+
+		-- bufferline specific colors
+		bufferline_selection = "#17b88a",
+
+		-- LSP diagnostics colors
+		error = "#b66b66",
+		warning = "#a3d5c1",
+		hint = "#9ebd5c",
+		info = "#5a7a9e",
+	}
+end
 
 M.extend = function(user_config)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
@@ -81,8 +148,8 @@ function M.setup(user_config)
 	local colors = M.config.colors
 
 	local highlight_groups = {
-		Normal = { fg = colors.fg, bg = M.config.transparent and "NONE" or colors.bg },
-		Cursor = { fg = colors.cursor, bg = M.config.transparent and "NONE" or colors.bg },
+		Normal = { fg = colors.fg, bg = colors.bg or M.config.transparent and "NONE" },
+		Cursor = { fg = colors.cursor, bg = colors.bg or M.config.transparent and "NONE" },
 		LineNr = { fg = colors.line_nr },
 		Visual = { bg = colors.visual },
 
@@ -101,7 +168,7 @@ function M.setup(user_config)
 		Operator = { fg = colors.operator },
 		Delimiter = { fg = colors.bracket },
 
-		Pmenu = { fg = colors.pmenu_fg, bg = M.config.transparent and "NONE" or colors.pmenu_bg },
+		Pmenu = { fg = colors.pmenu_fg, bg = colors.pmenu_bg or M.config.transparent and "NONE" },
 		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
 
 		-- have to define treesitter based functions as well for glow effect
@@ -113,7 +180,7 @@ function M.setup(user_config)
 		-- EndOfBuffer
 		EndOfBuffer = {
 			fg = M.config.show_end_of_buffer and colors.eob or colors.bg,
-			bg = M.config.transparent and "NONE" or colors.bg,
+			bg = colors.bg or M.config.transparent and "NONE",
 		},
 
 		-- LSP diagnostics
