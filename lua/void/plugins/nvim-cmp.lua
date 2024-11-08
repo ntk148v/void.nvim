@@ -1,8 +1,8 @@
 local M = {}
 
 M.setup = function(config)
-	local colors = require("darkvoid.colors").config.colors
-	local enabled = require("darkvoid.colors").config.colors.plugins.nvim_cmp
+	local colors = require("void.colors").config.colors
+	local enabled = require("void.colors").config.colors.plugins.nvim_cmp
 
 	if not enabled then
 		return

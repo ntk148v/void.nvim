@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup(colors, config)
-	local enabled = require("darkvoid.colors").config.colors.plugins.lualine
+	local enabled = require("void.colors").config.colors.plugins.lualine
 
 	if not enabled then
 		return

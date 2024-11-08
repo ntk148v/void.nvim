@@ -2,10 +2,10 @@
 
 ## Theme configs
 
-You can configure **darkvoid.nvim** by setting up the colorscheme in your way and configuring it like this:
+You can configure **void.nvim** by setting up the colorscheme in your way and configuring it like this:
 
 ```lua
-require('darkvoid').setup({
+require('void').setup({
     transparent = false,
     glow = false,
     show_end_of_buffer = true,
@@ -75,7 +75,7 @@ require('darkvoid').setup({
 
 ## lualine.nvim Configs
 
-To use darkvoid.nvim as your lualine theme add this in your config (lualine.lua)
+To use void.nvim as your lualine theme add this in your config (lualine.lua)
 
 ```lua
 return {
@@ -83,7 +83,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   enabled = true,
   config = function()
-    require("darkvoid").setup()
+    require("void").setup()
   end,
 }
 ```

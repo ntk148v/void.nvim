@@ -1,12 +1,12 @@
-# Darkvoid.nvim
+# void.nvim
 
 Have you ever been in a dark room coding by yourself? In that dark void, where the only light shines from your PC; the
 only thing that matters in that moment. This colorscheme is inspired by that feeling: like a dark void in the deep ocean, where the only lights
 are the alien creatures living there; like exploring a dark void in a deep cave where the glow of the mushrooms litters your vision... _Aah, the scenery!_
 
-**Darkvoid.nvim** is same, where only the important stuff.. That is, _your code_, is highlighted. _And if you want, you can make it **glow**!_
+**void.nvim** is same, where only the important stuff.. That is, _your code_, is highlighted. _And if you want, you can make it **glow**!_
 
-<img src="preview/darkvoid.png" alt="Description" width="800" style="border: 2px solid #111;">
+<img src="preview/void.png" alt="Description" width="800" style="border: 2px solid #111;">
 
 ## Features
 
@@ -20,21 +20,21 @@ are the alien creatures living there; like exploring a dark void in a deep cave 
 
 ## Installation
 
-To install `darkvoid.nvim`, you can use your preferred plugin manager. For example, with [packer.nvim](https://github.com/wbthomason/packer.nvim):
+To install `void.nvim`, you can use your preferred plugin manager. For example, with [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
-use 'aliqyan-21/darkvoid.nvim'
+use 'ntk148v/void.nvim'
 ```
 
 With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
-return {'aliqyan-21/darkvoid.nvim'}
+return {'ntk148v/void.nvim'}
 ```
 
 ## Configuration
 
-This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
+This is how you can configure `void.nvim` - [Configuration](config.md)
 
 ## Preview
 
@@ -44,7 +44,7 @@ This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
 
 ## Supported Plugins
 
-Currently, darkvoid.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc.
+Currently, void.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc.
 However, support for more popular plugins is still in progress. The following plugins are supported:
 
 - [x] nvim-tree: File explorer integration
@@ -64,7 +64,7 @@ I welcome contributions from the community to help integrate support for these p
 
 ## Contributing
 
-I encourage contributions to enhance the functionality and compatibility of darkvoid.nvim. To contribute:
+I encourage contributions to enhance the functionality and compatibility of void.nvim. To contribute:
 
 - Fork the repository.
 - Create a new branch for your feature or bug fix.
@@ -74,4 +74,4 @@ I encourage contributions to enhance the functionality and compatibility of dark
 
 ## License
 
-darkvoid.nvim is licensed under the MIT License.
+void.nvim is licensed under the MIT License.

@@ -172,7 +172,7 @@ function M.setup(user_config)
 	end
 
 	-- Apply plugin specific highlight groups
-	require("darkvoid.config").setup(M.config)
+	require("void.config").setup(M.config)
 end
 
 return M

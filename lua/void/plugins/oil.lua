@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup(colors)
-	local enabled = require("darkvoid.colors").config.colors.plugins.oil
+	local enabled = require("void.colors").config.colors.plugins.oil
 
 	if not enabled then
 		return

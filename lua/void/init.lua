@@ -1,11 +1,11 @@
 local M = {}
 
 M.setup = function(user_config)
-	require("darkvoid.colors").extend(user_config or {})
+	require("void.colors").extend(user_config or {})
 end
 
 M.load = function(user_config)
-	local config = require("darkvoid.colors").config
+	local config = require("void.colors").config
 	if user_config then
 		vim.tbl_deep_extend("force", config, user_config)
 	end
@@ -16,13 +16,13 @@ M.load = function(user_config)
 		vim.cmd("highlight clear")
 	end
 
-	vim.g.colors_name = "darkvoid"
+	vim.g.colors_name = "void"
 	vim.o.termguicolors = true
 
 	-- for colorscheme
-	require("darkvoid.colors").setup(config)
+	require("void.colors").setup(config)
 	-- for config
-	require("darkvoid.config").setup(config)
+	require("void.config").setup(config)
 end
 
 return M

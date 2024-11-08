@@ -1,9 +1,9 @@
 local M = {}
 
 M.setup = function()
-	local colors = require("darkvoid.colors").config.colors
+	local colors = require("void.colors").config.colors
 
-	local enabled = require("darkvoid.colors").config.colors.plugins.gitsigns
+	local enabled = require("void.colors").config.colors.plugins.gitsigns
 
 	if not enabled then
 		return

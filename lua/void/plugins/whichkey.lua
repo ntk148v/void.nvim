@@ -1,9 +1,9 @@
 local M = {}
 
 M.setup = function()
-	local colors = require("darkvoid.colors").config.colors
-	local enabled = require("darkvoid.colors").config.colors.plugins.whichkey
-	local transparent = require("darkvoid.colors").config.transparent
+	local colors = require("void.colors").config.colors
+	local enabled = require("void.colors").config.colors.plugins.whichkey
+	local transparent = require("void.colors").config.transparent
 
 	if not enabled then
 		return

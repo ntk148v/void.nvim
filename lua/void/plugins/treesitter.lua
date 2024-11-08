@@ -1,8 +1,8 @@
 local M = {}
 
 function M.setup()
-	local colors = require("darkvoid.colors").config.colors
-	local enabled = require("darkvoid.colors").config.colors.plugins.treesitter
+	local colors = require("void.colors").config.colors
+	local enabled = require("void.colors").config.colors.plugins.treesitter
 
 	if not enabled then
 		return

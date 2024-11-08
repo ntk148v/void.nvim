@@ -1,13 +1,13 @@
 local M = {}
 
 function M.setup()
-	local enabled = require("darkvoid.colors").config.colors.plugins.bufferline
+	local enabled = require("void.colors").config.colors.plugins.bufferline
 
 	if not enabled then
 		return
 	end
 
-	local colors = require("darkvoid.colors").config.colors
+	local colors = require("void.colors").config.colors
 	local bufferline_highlight_groups = {
 		BufferLineFill = { bg = "NONE", fg = colors.fg },
 		BufferLineBackground = { bg = "NONE", fg = colors.fg },
